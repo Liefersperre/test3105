@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="30ea24513daf4655b5566fcfd3808ec6" Name="Diagram1">
+        <EntityTypeShape EntityType="HumanResDBModel.EmployeeCard" Width="1.5" PointX="0.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.Job_vacancy" Width="1.5" PointX="6" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.Staffing_table" Width="1.5" PointX="6" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.Structural_divisions" Width="1.5" PointX="3.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.EmployeeCard_page1" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.EmployeeCard_page10" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.EmployeeCard_page3" Width="1.5" PointX="6" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.EmployeeCard_page4" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.EmployeeCard_page5" Width="1.5" PointX="3" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.EmployeeCard_page6" Width="1.5" PointX="3" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.EmployeeCard_page7" Width="1.5" PointX="3" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.EmployeeCard_page8" Width="1.5" PointX="3" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResDBModel.EmployeeCard_page9" Width="1.5" PointX="3" PointY="31.375" IsExpanded="true" />
+        <AssociationConnector Association="HumanResDBModel.FK_EmployeeCard_page1_EmployeeCard" ManuallyRouted="false" />
+        <AssociationConnector Association="HumanResDBModel.FK_EmployeeCard_page10_EmployeeCard" ManuallyRouted="false" />
+        <AssociationConnector Association="HumanResDBModel.FK_EmployeeCard_page3_EmployeeCard" ManuallyRouted="false" />
+        <AssociationConnector Association="HumanResDBModel.FK_EmployeeCard_page4_EmployeeCard" ManuallyRouted="false" />
+        <AssociationConnector Association="HumanResDBModel.FK_EmployeeCard_page5_EmployeeCard" ManuallyRouted="false" />
+        <AssociationConnector Association="HumanResDBModel.FK_EmployeeCard_page6_EmployeeCard" ManuallyRouted="false" />
+        <AssociationConnector Association="HumanResDBModel.FK_EmployeeCard_page7_EmployeeCard" ManuallyRouted="false" />
+        <AssociationConnector Association="HumanResDBModel.FK_EmployeeCard_page8_EmployeeCard" ManuallyRouted="false" />
+        <AssociationConnector Association="HumanResDBModel.FK_EmployeeCard_page9_EmployeeCard" ManuallyRouted="false" />
+        <AssociationConnector Association="HumanResDBModel.FK_Job_vacancy_Structural_divisions" ManuallyRouted="false" />
+        <AssociationConnector Association="HumanResDBModel.FK_Staffing_table_Structural_divisions" ManuallyRouted="false" />
+        <AssociationConnector Association="HumanResDBModel.FK_EmployeeCard_page3_Structural_divisions" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

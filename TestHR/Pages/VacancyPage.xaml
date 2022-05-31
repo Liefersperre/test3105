@@ -1,0 +1,37 @@
+﻿<Page x:Class="TestHR.Pages.VacancyPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestHR.Pages"
+      mc:Ignorable="d" 
+      Height="650" Width="850"
+      Title="VacancyPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Структурные подразделения" Style="{DynamicResource MainLabel}" FontSize="22" Margin="285,68,281,0" Width="284"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="12*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="12*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="directButton" Grid.Column="1" Grid.Row="1" Style="{DynamicResource MainBigButton}" Click="directButton_Click">Дирекция</Button>
+            <Button x:Name="HumanResButton" Grid.Column="3" Grid.Row="1" Style="{DynamicResource MainBigButton}" Click="HumanResButton_Click">Отдел кадров</Button>
+            <Button x:Name="DeliveryButton" Grid.Column="1" Grid.Row="3" Style="{DynamicResource MainBigButton}" Click="DeliveryButton_Click">Отдел доставки</Button>
+        </Grid>
+    </Grid>
+</Page>

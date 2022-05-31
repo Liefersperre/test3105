@@ -1,0 +1,109 @@
+﻿<Page x:Class="TestHR.Pages.T2Pages.EmployeeCard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestHR.Pages.T2Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="800"
+      Title="EmployeeCard">
+
+    <Grid Height="818" Width="727">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="719*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="269*"/>
+            <RowDefinition Height="266*"/>
+            <RowDefinition Height="266*"/>
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="14,108,5,0" Height="70" Width="700" Grid.Column="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="23" Margin="78,-173,20,220" Width="602">
+                <Label Content="Фамилия"/>
+                <TextBox x:Name="LastNameTextBox" Width="140"/>
+                <Label Content="Имя"/>
+                <TextBox x:Name="NameTextBox" Width="120"/>
+                <Label Content="Отчество"/>
+                <TextBox x:Name="OtherNameTextBox" Width="130"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="0">
+            <StackPanel>
+                <Label Content="Дата рождения" Style="{DynamicResource ResourceKey=SmallLabel}" Margin="0,0,309,0" Width="410"/>
+                <TextBox x:Name="BirthDayTextBox" Width="320"/>
+                <Label Content="Место рождения" Style="{DynamicResource ResourceKey=SmallLabel}" Margin="0,0,309,0" Width="410"/>
+                <TextBox x:Name="WorkPlaceTextBox" Width="420"/>
+                <Label Content="Гражданство" Style="{DynamicResource ResourceKey=SmallLabel}" Margin="0,0,309,0" Width="410"/>
+                <TextBox x:Name="СitizenshipTextBox" Width="420"/>
+                <Label Content="Знание иностранного языка" Style="{DynamicResource ResourceKey=SmallLabel}" Margin="0,0,309,0" Width="410"/>
+                <CheckBox x:Name="Status" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBox x:Name="EngLangTextBox" Width="120" Margin="304,0"/>
+                <Label Content="Образование" Style="{DynamicResource ResourceKey=SmallLabel}" Margin="0,0,309,0" Width="410"/>
+                <TextBox x:Name="EducationTextBox" Width="420"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="220*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Стаж работы (по состоянию на ___ июня 2021г.):" Style="{DynamicResource ResourceKey=SmallLabel}" Margin="0,0,309,0" Width="410"/>
+            <Grid Grid.Row="1" Margin="0,0,-7,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="181*"/>
+                    <ColumnDefinition Width="547*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Margin="57,25,0,135">
+                    <Label Content="Общее" Style="{DynamicResource SmallLabel}" Margin="0,0,35,0" Width="87"/>
+                    <Label/>
+                    <Label/>
+                    <Label Content="Непрерывное" Style="{DynamicResource SmallLabel}" Margin="0,0,25,0" Width="97"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Height="25" Margin="0,27,0,187">
+                    <TextBox x:Name="DaysCountTextBox" Width="140"/>
+                    <Label Content="Дней" Style="{DynamicResource SmallLabel}"/>
+                    <TextBox x:Name="MounthsCountTextBox" Width="140"/>
+                    <Label Content="месяцев" Style="{DynamicResource SmallLabel}"/>
+                    <TextBox x:Name="YearsCountTextBox" Width="140"/>
+                    <Label Content="лет" Style="{DynamicResource SmallLabel}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Height="25" Margin="0,75,0,135">
+                    <TextBox x:Name="DaysCountTextBox1" Width="140"/>
+                    <Label Content="Дней" Style="{DynamicResource SmallLabel}"/>
+                    <TextBox x:Name="MounthsCountTextBox1" Width="140"/>
+                    <Label Content="месяцев" Style="{DynamicResource SmallLabel}"/>
+                    <TextBox x:Name="YearsCountTextBox1" Width="140"/>
+                    <Label Content="лет" Style="{DynamicResource SmallLabel}"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,10,0,46">
+                <Label Content="Паспорт:  N" Width="80" Style="{DynamicResource SmallLabel}"/>
+                <TextBox x:Name="pasport_num" Width="140" Margin="0,0,0,10"/>
+                <Label Width="40"/>
+                <Label Content="Дата выдачи" Width="90" Style="{DynamicResource SmallLabel}"/>
+                <TextBox x:Name="gdate" Width="140" Margin="0,0,0,10"/>
+                <Label Content="г." Width="20"/>
+            </StackPanel>
+            <Label Content="Адрес места жительства:" Grid.Row="1" Style="{DynamicResource SmallLabel}" Margin="0,0,278,61" Width="441"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,30,0,26">
+                <Label Content="По паспорту " Width="87" Style="{DynamicResource SmallLabel}"/>
+                <TextBox x:Name="postal_code" Width="140" Margin="0,0,0,10"/>
+                <Label Width="24"/>
+                <TextBox x:Name="address" Width="286" Margin="0,0,0,10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="2">
+                <Label Content="Номер телефона" Width="112" Style="{DynamicResource SmallLabel}"/>
+                <TextBox x:Name="phone_number" Width="130" Margin="0,0,0,65"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</Page>

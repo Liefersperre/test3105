@@ -1,0 +1,1161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище HumanResDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EmployeeCard">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="employee_code" Type="nchar" MaxLength="10" />
+          <Property Name="Last_name" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="First_name" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="Other_name" Type="nchar" MaxLength="40" />
+          <Property Name="Birth_date" Type="date" Nullable="false" />
+          <Property Name="Post" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Work_experience" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HumanResDB.dbo.EmployeeCard_page1" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="EmployeeCard_page1">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Last_name" />
+            <PropertyRef Name="First_name" />
+            <PropertyRef Name="Birth_date" />
+            <PropertyRef Name="Birth_place" />
+            <PropertyRef Name="Citizenship" />
+            <PropertyRef Name="Education" />
+            <PropertyRef Name="Work_experience_d" />
+            <PropertyRef Name="Work_experience_m" />
+            <PropertyRef Name="Passport_number" />
+            <PropertyRef Name="Issue_date" />
+            <PropertyRef Name="Residing_place" />
+            <PropertyRef Name="Phone_number" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="employee_code" Type="nchar" MaxLength="10" />
+          <Property Name="Last_name" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="First_name" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="Other_name" Type="nchar" MaxLength="40" />
+          <Property Name="Birth_date" Type="date" Nullable="false" />
+          <Property Name="Birth_place" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Citizenship" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Eng_knowledge" Type="bit" />
+          <Property Name="Education" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="Work_experience_d" Type="int" Nullable="false" />
+          <Property Name="Work_experience_m" Type="int" Nullable="false" />
+          <Property Name="Work_experience_y" Type="int" />
+          <Property Name="Passport_number" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Issue_date" Type="date" Nullable="false" />
+          <Property Name="Residing_place" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone_number" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HumanResDB.dbo.EmployeeCard_page10" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="EmployeeCard_page10">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="termination_reason" />
+            <PropertyRef Name="dismissal_date" />
+            <PropertyRef Name="order_number" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="employee_code" Type="nchar" MaxLength="10" />
+          <Property Name="termination_reason" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="dismissal_date" Type="date" Nullable="false" />
+          <Property Name="order_number" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HumanResDB.dbo.EmployeeCard_page3" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="EmployeeCard_page3">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="date" />
+            <PropertyRef Name="post" />
+            <PropertyRef Name="salary" />
+            <PropertyRef Name="cause" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="employee_code" Type="nchar" MaxLength="10" />
+          <Property Name="date" Type="date" Nullable="false" />
+          <Property Name="structural_division_name" Type="nchar" MaxLength="50" />
+          <Property Name="structural_division_id" Type="int" />
+          <Property Name="post" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="salary" Type="money" Nullable="false" />
+          <Property Name="cause" Type="nchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HumanResDB.dbo.EmployeeCard_page4" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="EmployeeCard_page4">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="qualification_category" />
+            <PropertyRef Name="surcharge_amount" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="employee_code" Type="nchar" MaxLength="10" />
+          <Property Name="qualification_category" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="surcharge_amount" Type="money" Nullable="false" />
+          <Property Name="cause" Type="nchar" MaxLength="100" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HumanResDB.dbo.EmployeeCard_page5" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="EmployeeCard_page5">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="start_date" />
+            <PropertyRef Name="end_date" />
+            <PropertyRef Name="prof_dev_type" />
+            <PropertyRef Name="educational_institution_name" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="employee_code" Type="nchar" MaxLength="10" />
+          <Property Name="start_date" Type="date" Nullable="false" />
+          <Property Name="end_date" Type="date" Nullable="false" />
+          <Property Name="prof_dev_type" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="educational_institution_name" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="cause" Type="nchar" MaxLength="100" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HumanResDB.dbo.EmployeeCard_page6" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="EmployeeCard_page6">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="start_date" />
+            <PropertyRef Name="end_date" />
+            <PropertyRef Name="specialty" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="employee_code" Type="nchar" MaxLength="10" />
+          <Property Name="start_date" Type="date" Nullable="false" />
+          <Property Name="end_date" Type="date" Nullable="false" />
+          <Property Name="specialty" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="cause" Type="nchar" MaxLength="100" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HumanResDB.dbo.EmployeeCard_page7" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="EmployeeCard_page7">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="award_name" />
+            <PropertyRef Name="issue_date" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="employee_code" Type="nchar" MaxLength="10" />
+          <Property Name="award_name" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="issue_date" Type="date" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HumanResDB.dbo.EmployeeCard_page8" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="EmployeeCard_page8">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="vacation_type" />
+            <PropertyRef Name="days_number" />
+            <PropertyRef Name="start_date" />
+            <PropertyRef Name="end_date" />
+            <PropertyRef Name="cause" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="employee_code" Type="nchar" MaxLength="10" />
+          <Property Name="vacation_type" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="days_number" Type="int" Nullable="false" />
+          <Property Name="start_date" Type="date" Nullable="false" />
+          <Property Name="end_date" Type="date" Nullable="false" />
+          <Property Name="cause" Type="nchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "HumanResDB.dbo.EmployeeCard_page9" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="EmployeeCard_page9">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="additional_information" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="employee_code" Type="nchar" MaxLength="10" />
+          <Property Name="additional_information" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Job_vacancy">
+          <Key>
+            <PropertyRef Name="vacansy_id" />
+          </Key>
+          <Property Name="vacansy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="structural_division_name" Type="nchar" MaxLength="50" />
+          <Property Name="structural_division_id" Type="int" Nullable="false" />
+          <Property Name="post" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="places_quantity" Type="int" Nullable="false" />
+          <Property Name="total_per_month" Type="money" Nullable="false" />
+          <Property Name="comment" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Staffing_table">
+          <Key>
+            <PropertyRef Name="staffing_table_id" />
+          </Key>
+          <Property Name="staffing_table_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="structural_division_name" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="structural_division_id" Type="int" Nullable="false" />
+          <Property Name="post" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="number_of_employees" Type="int" Nullable="false" />
+          <Property Name="tariff_rate" Type="money" Nullable="false" />
+          <Property Name="allowance" Type="money" />
+          <Property Name="total_per_month" Type="money" Nullable="false" />
+          <Property Name="compilation_date" Type="date" Nullable="false" />
+          <Property Name="comment" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Structural_divisions">
+          <Key>
+            <PropertyRef Name="structural_division_id" />
+          </Key>
+          <Property Name="structural_division_id" Type="int" Nullable="false" />
+          <Property Name="structural_division_name" Type="nchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_EmployeeCard_page1_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page1" Type="Self.EmployeeCard_page1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page1">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page10_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page10" Type="Self.EmployeeCard_page10" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page10">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page3_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page3" Type="Self.EmployeeCard_page3" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page3">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page3_Structural_divisions">
+          <End Role="Structural_divisions" Type="Self.Structural_divisions" Multiplicity="0..1" />
+          <End Role="EmployeeCard_page3" Type="Self.EmployeeCard_page3" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Structural_divisions">
+              <PropertyRef Name="structural_division_id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page3">
+              <PropertyRef Name="structural_division_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page4_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page4" Type="Self.EmployeeCard_page4" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page4">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page5_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page5" Type="Self.EmployeeCard_page5" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page5">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page6_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page6" Type="Self.EmployeeCard_page6" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page6">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page7_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page7" Type="Self.EmployeeCard_page7" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page7">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page8_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page8" Type="Self.EmployeeCard_page8" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page8">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page9_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page9" Type="Self.EmployeeCard_page9" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page9">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_vacancy_Structural_divisions">
+          <End Role="Structural_divisions" Type="Self.Structural_divisions" Multiplicity="1" />
+          <End Role="Job_vacancy" Type="Self.Job_vacancy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Structural_divisions">
+              <PropertyRef Name="structural_division_id" />
+            </Principal>
+            <Dependent Role="Job_vacancy">
+              <PropertyRef Name="structural_division_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Staffing_table_Structural_divisions">
+          <End Role="Structural_divisions" Type="Self.Structural_divisions" Multiplicity="1" />
+          <End Role="Staffing_table" Type="Self.Staffing_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Structural_divisions">
+              <PropertyRef Name="structural_division_id" />
+            </Principal>
+            <Dependent Role="Staffing_table">
+              <PropertyRef Name="structural_division_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище HumanResDBModelContainer">
+          <EntitySet Name="EmployeeCard" EntityType="Self.EmployeeCard" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Job_vacancy" EntityType="Self.Job_vacancy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Staffing_table" EntityType="Self.Staffing_table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Structural_divisions" EntityType="Self.Structural_divisions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeeCard_page1" EntityType="Self.EmployeeCard_page1" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EmployeeCard_page1].[id] AS [id], 
+    [EmployeeCard_page1].[employee_code] AS [employee_code], 
+    [EmployeeCard_page1].[Last_name] AS [Last_name], 
+    [EmployeeCard_page1].[First_name] AS [First_name], 
+    [EmployeeCard_page1].[Other_name] AS [Other_name], 
+    [EmployeeCard_page1].[Birth_date] AS [Birth_date], 
+    [EmployeeCard_page1].[Birth_place] AS [Birth_place], 
+    [EmployeeCard_page1].[Citizenship] AS [Citizenship], 
+    [EmployeeCard_page1].[Eng_knowledge] AS [Eng_knowledge], 
+    [EmployeeCard_page1].[Education] AS [Education], 
+    [EmployeeCard_page1].[Work_experience_d] AS [Work_experience_d], 
+    [EmployeeCard_page1].[Work_experience_m] AS [Work_experience_m], 
+    [EmployeeCard_page1].[Work_experience_y] AS [Work_experience_y], 
+    [EmployeeCard_page1].[Passport_number] AS [Passport_number], 
+    [EmployeeCard_page1].[Issue_date] AS [Issue_date], 
+    [EmployeeCard_page1].[Residing_place] AS [Residing_place], 
+    [EmployeeCard_page1].[Phone_number] AS [Phone_number]
+    FROM [dbo].[EmployeeCard_page1] AS [EmployeeCard_page1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EmployeeCard_page10" EntityType="Self.EmployeeCard_page10" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EmployeeCard_page10].[id] AS [id], 
+    [EmployeeCard_page10].[employee_code] AS [employee_code], 
+    [EmployeeCard_page10].[termination_reason] AS [termination_reason], 
+    [EmployeeCard_page10].[dismissal_date] AS [dismissal_date], 
+    [EmployeeCard_page10].[order_number] AS [order_number]
+    FROM [dbo].[EmployeeCard_page10] AS [EmployeeCard_page10]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EmployeeCard_page3" EntityType="Self.EmployeeCard_page3" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EmployeeCard_page3].[id] AS [id], 
+    [EmployeeCard_page3].[employee_code] AS [employee_code], 
+    [EmployeeCard_page3].[date] AS [date], 
+    [EmployeeCard_page3].[structural_division_name] AS [structural_division_name], 
+    [EmployeeCard_page3].[structural_division_id] AS [structural_division_id], 
+    [EmployeeCard_page3].[post] AS [post], 
+    [EmployeeCard_page3].[salary] AS [salary], 
+    [EmployeeCard_page3].[cause] AS [cause]
+    FROM [dbo].[EmployeeCard_page3] AS [EmployeeCard_page3]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EmployeeCard_page4" EntityType="Self.EmployeeCard_page4" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EmployeeCard_page4].[id] AS [id], 
+    [EmployeeCard_page4].[employee_code] AS [employee_code], 
+    [EmployeeCard_page4].[qualification_category] AS [qualification_category], 
+    [EmployeeCard_page4].[surcharge_amount] AS [surcharge_amount], 
+    [EmployeeCard_page4].[cause] AS [cause]
+    FROM [dbo].[EmployeeCard_page4] AS [EmployeeCard_page4]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EmployeeCard_page5" EntityType="Self.EmployeeCard_page5" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EmployeeCard_page5].[id] AS [id], 
+    [EmployeeCard_page5].[employee_code] AS [employee_code], 
+    [EmployeeCard_page5].[start_date] AS [start_date], 
+    [EmployeeCard_page5].[end_date] AS [end_date], 
+    [EmployeeCard_page5].[prof_dev_type] AS [prof_dev_type], 
+    [EmployeeCard_page5].[educational_institution_name] AS [educational_institution_name], 
+    [EmployeeCard_page5].[cause] AS [cause]
+    FROM [dbo].[EmployeeCard_page5] AS [EmployeeCard_page5]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EmployeeCard_page6" EntityType="Self.EmployeeCard_page6" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EmployeeCard_page6].[id] AS [id], 
+    [EmployeeCard_page6].[employee_code] AS [employee_code], 
+    [EmployeeCard_page6].[start_date] AS [start_date], 
+    [EmployeeCard_page6].[end_date] AS [end_date], 
+    [EmployeeCard_page6].[specialty] AS [specialty], 
+    [EmployeeCard_page6].[cause] AS [cause]
+    FROM [dbo].[EmployeeCard_page6] AS [EmployeeCard_page6]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EmployeeCard_page7" EntityType="Self.EmployeeCard_page7" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EmployeeCard_page7].[id] AS [id], 
+    [EmployeeCard_page7].[employee_code] AS [employee_code], 
+    [EmployeeCard_page7].[award_name] AS [award_name], 
+    [EmployeeCard_page7].[issue_date] AS [issue_date]
+    FROM [dbo].[EmployeeCard_page7] AS [EmployeeCard_page7]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EmployeeCard_page8" EntityType="Self.EmployeeCard_page8" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EmployeeCard_page8].[id] AS [id], 
+    [EmployeeCard_page8].[employee_code] AS [employee_code], 
+    [EmployeeCard_page8].[vacation_type] AS [vacation_type], 
+    [EmployeeCard_page8].[days_number] AS [days_number], 
+    [EmployeeCard_page8].[start_date] AS [start_date], 
+    [EmployeeCard_page8].[end_date] AS [end_date], 
+    [EmployeeCard_page8].[cause] AS [cause]
+    FROM [dbo].[EmployeeCard_page8] AS [EmployeeCard_page8]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EmployeeCard_page9" EntityType="Self.EmployeeCard_page9" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EmployeeCard_page9].[id] AS [id], 
+    [EmployeeCard_page9].[employee_code] AS [employee_code], 
+    [EmployeeCard_page9].[additional_information] AS [additional_information]
+    FROM [dbo].[EmployeeCard_page9] AS [EmployeeCard_page9]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_EmployeeCard_page1_EmployeeCard" Association="Self.FK_EmployeeCard_page1_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page1" EntitySet="EmployeeCard_page1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page10_EmployeeCard" Association="Self.FK_EmployeeCard_page10_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page10" EntitySet="EmployeeCard_page10" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page3_EmployeeCard" Association="Self.FK_EmployeeCard_page3_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page3" EntitySet="EmployeeCard_page3" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page3_Structural_divisions" Association="Self.FK_EmployeeCard_page3_Structural_divisions">
+            <End Role="Structural_divisions" EntitySet="Structural_divisions" />
+            <End Role="EmployeeCard_page3" EntitySet="EmployeeCard_page3" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page4_EmployeeCard" Association="Self.FK_EmployeeCard_page4_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page4" EntitySet="EmployeeCard_page4" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page5_EmployeeCard" Association="Self.FK_EmployeeCard_page5_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page5" EntitySet="EmployeeCard_page5" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page6_EmployeeCard" Association="Self.FK_EmployeeCard_page6_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page6" EntitySet="EmployeeCard_page6" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page7_EmployeeCard" Association="Self.FK_EmployeeCard_page7_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page7" EntitySet="EmployeeCard_page7" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page8_EmployeeCard" Association="Self.FK_EmployeeCard_page8_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page8" EntitySet="EmployeeCard_page8" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page9_EmployeeCard" Association="Self.FK_EmployeeCard_page9_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page9" EntitySet="EmployeeCard_page9" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_vacancy_Structural_divisions" Association="Self.FK_Job_vacancy_Structural_divisions">
+            <End Role="Structural_divisions" EntitySet="Structural_divisions" />
+            <End Role="Job_vacancy" EntitySet="Job_vacancy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Staffing_table_Structural_divisions" Association="Self.FK_Staffing_table_Structural_divisions">
+            <End Role="Structural_divisions" EntitySet="Structural_divisions" />
+            <End Role="Staffing_table" EntitySet="Staffing_table" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HumanResDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EmployeeCard">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="employee_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Last_name" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="First_name" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Other_name" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="Birth_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Post" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Work_experience" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmployeeCard_page1" Relationship="Self.FK_EmployeeCard_page1_EmployeeCard" FromRole="EmployeeCard" ToRole="EmployeeCard_page1" />
+          <NavigationProperty Name="EmployeeCard_page10" Relationship="Self.FK_EmployeeCard_page10_EmployeeCard" FromRole="EmployeeCard" ToRole="EmployeeCard_page10" />
+          <NavigationProperty Name="EmployeeCard_page3" Relationship="Self.FK_EmployeeCard_page3_EmployeeCard" FromRole="EmployeeCard" ToRole="EmployeeCard_page3" />
+          <NavigationProperty Name="EmployeeCard_page4" Relationship="Self.FK_EmployeeCard_page4_EmployeeCard" FromRole="EmployeeCard" ToRole="EmployeeCard_page4" />
+          <NavigationProperty Name="EmployeeCard_page5" Relationship="Self.FK_EmployeeCard_page5_EmployeeCard" FromRole="EmployeeCard" ToRole="EmployeeCard_page5" />
+          <NavigationProperty Name="EmployeeCard_page6" Relationship="Self.FK_EmployeeCard_page6_EmployeeCard" FromRole="EmployeeCard" ToRole="EmployeeCard_page6" />
+          <NavigationProperty Name="EmployeeCard_page7" Relationship="Self.FK_EmployeeCard_page7_EmployeeCard" FromRole="EmployeeCard" ToRole="EmployeeCard_page7" />
+          <NavigationProperty Name="EmployeeCard_page8" Relationship="Self.FK_EmployeeCard_page8_EmployeeCard" FromRole="EmployeeCard" ToRole="EmployeeCard_page8" />
+          <NavigationProperty Name="EmployeeCard_page9" Relationship="Self.FK_EmployeeCard_page9_EmployeeCard" FromRole="EmployeeCard" ToRole="EmployeeCard_page9" />
+        </EntityType>
+        <EntityType Name="Job_vacancy">
+          <Key>
+            <PropertyRef Name="vacansy_id" />
+          </Key>
+          <Property Name="vacansy_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="structural_division_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="structural_division_id" Type="Int32" Nullable="false" />
+          <Property Name="post" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="places_quantity" Type="Int32" Nullable="false" />
+          <Property Name="total_per_month" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="comment" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Structural_divisions" Relationship="Self.FK_Job_vacancy_Structural_divisions" FromRole="Job_vacancy" ToRole="Structural_divisions" />
+        </EntityType>
+        <EntityType Name="Staffing_table">
+          <Key>
+            <PropertyRef Name="staffing_table_id" />
+          </Key>
+          <Property Name="staffing_table_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="structural_division_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="structural_division_id" Type="Int32" Nullable="false" />
+          <Property Name="post" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="number_of_employees" Type="Int32" Nullable="false" />
+          <Property Name="tariff_rate" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="allowance" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="total_per_month" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="compilation_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="comment" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Structural_divisions" Relationship="Self.FK_Staffing_table_Structural_divisions" FromRole="Staffing_table" ToRole="Structural_divisions" />
+        </EntityType>
+        <EntityType Name="Structural_divisions">
+          <Key>
+            <PropertyRef Name="structural_division_id" />
+          </Key>
+          <Property Name="structural_division_id" Type="Int32" Nullable="false" />
+          <Property Name="structural_division_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Job_vacancy" Relationship="Self.FK_Job_vacancy_Structural_divisions" FromRole="Structural_divisions" ToRole="Job_vacancy" />
+          <NavigationProperty Name="Staffing_table" Relationship="Self.FK_Staffing_table_Structural_divisions" FromRole="Structural_divisions" ToRole="Staffing_table" />
+          <NavigationProperty Name="EmployeeCard_page3" Relationship="Self.FK_EmployeeCard_page3_Structural_divisions" FromRole="Structural_divisions" ToRole="EmployeeCard_page3" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmployeeCard_page1">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Last_name" />
+            <PropertyRef Name="First_name" />
+            <PropertyRef Name="Birth_date" />
+            <PropertyRef Name="Birth_place" />
+            <PropertyRef Name="Citizenship" />
+            <PropertyRef Name="Education" />
+            <PropertyRef Name="Work_experience_d" />
+            <PropertyRef Name="Work_experience_m" />
+            <PropertyRef Name="Passport_number" />
+            <PropertyRef Name="Issue_date" />
+            <PropertyRef Name="Residing_place" />
+            <PropertyRef Name="Phone_number" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="employee_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Last_name" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="First_name" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Other_name" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="Birth_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Birth_place" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Citizenship" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Eng_knowledge" Type="Boolean" />
+          <Property Name="Education" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Work_experience_d" Type="Int32" Nullable="false" />
+          <Property Name="Work_experience_m" Type="Int32" Nullable="false" />
+          <Property Name="Work_experience_y" Type="Int32" />
+          <Property Name="Passport_number" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Issue_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Residing_place" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Phone_number" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="EmployeeCard" Relationship="Self.FK_EmployeeCard_page1_EmployeeCard" FromRole="EmployeeCard_page1" ToRole="EmployeeCard" />
+        </EntityType>
+        <EntityType Name="EmployeeCard_page10">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="termination_reason" />
+            <PropertyRef Name="dismissal_date" />
+            <PropertyRef Name="order_number" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="employee_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="termination_reason" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="dismissal_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="order_number" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmployeeCard" Relationship="Self.FK_EmployeeCard_page10_EmployeeCard" FromRole="EmployeeCard_page10" ToRole="EmployeeCard" />
+        </EntityType>
+        <EntityType Name="EmployeeCard_page3">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="date" />
+            <PropertyRef Name="post" />
+            <PropertyRef Name="salary" />
+            <PropertyRef Name="cause" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="employee_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="structural_division_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="structural_division_id" Type="Int32" />
+          <Property Name="post" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="salary" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="cause" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="EmployeeCard" Relationship="Self.FK_EmployeeCard_page3_EmployeeCard" FromRole="EmployeeCard_page3" ToRole="EmployeeCard" />
+          <NavigationProperty Name="Structural_divisions" Relationship="Self.FK_EmployeeCard_page3_Structural_divisions" FromRole="EmployeeCard_page3" ToRole="Structural_divisions" />
+        </EntityType>
+        <EntityType Name="EmployeeCard_page4">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="qualification_category" />
+            <PropertyRef Name="surcharge_amount" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="employee_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="qualification_category" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="surcharge_amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="cause" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="EmployeeCard" Relationship="Self.FK_EmployeeCard_page4_EmployeeCard" FromRole="EmployeeCard_page4" ToRole="EmployeeCard" />
+        </EntityType>
+        <EntityType Name="EmployeeCard_page5">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="start_date" />
+            <PropertyRef Name="end_date" />
+            <PropertyRef Name="prof_dev_type" />
+            <PropertyRef Name="educational_institution_name" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="employee_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="start_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="end_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="prof_dev_type" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="educational_institution_name" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="cause" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="EmployeeCard" Relationship="Self.FK_EmployeeCard_page5_EmployeeCard" FromRole="EmployeeCard_page5" ToRole="EmployeeCard" />
+        </EntityType>
+        <EntityType Name="EmployeeCard_page6">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="start_date" />
+            <PropertyRef Name="end_date" />
+            <PropertyRef Name="specialty" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="employee_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="start_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="end_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="specialty" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="cause" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="EmployeeCard" Relationship="Self.FK_EmployeeCard_page6_EmployeeCard" FromRole="EmployeeCard_page6" ToRole="EmployeeCard" />
+        </EntityType>
+        <EntityType Name="EmployeeCard_page7">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="award_name" />
+            <PropertyRef Name="issue_date" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="employee_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="award_name" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="issue_date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="EmployeeCard" Relationship="Self.FK_EmployeeCard_page7_EmployeeCard" FromRole="EmployeeCard_page7" ToRole="EmployeeCard" />
+        </EntityType>
+        <EntityType Name="EmployeeCard_page8">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="vacation_type" />
+            <PropertyRef Name="days_number" />
+            <PropertyRef Name="start_date" />
+            <PropertyRef Name="end_date" />
+            <PropertyRef Name="cause" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="employee_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="vacation_type" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="days_number" Type="Int32" Nullable="false" />
+          <Property Name="start_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="end_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="cause" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="EmployeeCard" Relationship="Self.FK_EmployeeCard_page8_EmployeeCard" FromRole="EmployeeCard_page8" ToRole="EmployeeCard" />
+        </EntityType>
+        <EntityType Name="EmployeeCard_page9">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="additional_information" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="employee_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="additional_information" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="EmployeeCard" Relationship="Self.FK_EmployeeCard_page9_EmployeeCard" FromRole="EmployeeCard_page9" ToRole="EmployeeCard" />
+        </EntityType>
+        <Association Name="FK_EmployeeCard_page1_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page1" Type="Self.EmployeeCard_page1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page1">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page10_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page10" Type="Self.EmployeeCard_page10" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page10">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page3_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page3" Type="Self.EmployeeCard_page3" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page3">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page4_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page4" Type="Self.EmployeeCard_page4" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page4">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page5_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page5" Type="Self.EmployeeCard_page5" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page5">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page6_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page6" Type="Self.EmployeeCard_page6" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page6">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page7_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page7" Type="Self.EmployeeCard_page7" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page7">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page8_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page8" Type="Self.EmployeeCard_page8" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page8">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page9_EmployeeCard">
+          <End Role="EmployeeCard" Type="Self.EmployeeCard" Multiplicity="1" />
+          <End Role="EmployeeCard_page9" Type="Self.EmployeeCard_page9" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCard">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page9">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_vacancy_Structural_divisions">
+          <End Role="Structural_divisions" Type="Self.Structural_divisions" Multiplicity="1" />
+          <End Role="Job_vacancy" Type="Self.Job_vacancy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Structural_divisions">
+              <PropertyRef Name="structural_division_id" />
+            </Principal>
+            <Dependent Role="Job_vacancy">
+              <PropertyRef Name="structural_division_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Staffing_table_Structural_divisions">
+          <End Role="Structural_divisions" Type="Self.Structural_divisions" Multiplicity="1" />
+          <End Role="Staffing_table" Type="Self.Staffing_table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Structural_divisions">
+              <PropertyRef Name="structural_division_id" />
+            </Principal>
+            <Dependent Role="Staffing_table">
+              <PropertyRef Name="structural_division_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeCard_page3_Structural_divisions">
+          <End Role="Structural_divisions" Type="Self.Structural_divisions" Multiplicity="0..1" />
+          <End Role="EmployeeCard_page3" Type="Self.EmployeeCard_page3" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Structural_divisions">
+              <PropertyRef Name="structural_division_id" />
+            </Principal>
+            <Dependent Role="EmployeeCard_page3">
+              <PropertyRef Name="structural_division_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HumanResDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EmployeeCard" EntityType="Self.EmployeeCard" />
+          <EntitySet Name="Job_vacancy" EntityType="Self.Job_vacancy" />
+          <EntitySet Name="Staffing_table" EntityType="Self.Staffing_table" />
+          <EntitySet Name="Structural_divisions" EntityType="Self.Structural_divisions" />
+          <EntitySet Name="User" EntityType="Self.User" />
+          <EntitySet Name="EmployeeCard_page1" EntityType="Self.EmployeeCard_page1" />
+          <EntitySet Name="EmployeeCard_page10" EntityType="Self.EmployeeCard_page10" />
+          <EntitySet Name="EmployeeCard_page3" EntityType="Self.EmployeeCard_page3" />
+          <EntitySet Name="EmployeeCard_page4" EntityType="Self.EmployeeCard_page4" />
+          <EntitySet Name="EmployeeCard_page5" EntityType="Self.EmployeeCard_page5" />
+          <EntitySet Name="EmployeeCard_page6" EntityType="Self.EmployeeCard_page6" />
+          <EntitySet Name="EmployeeCard_page7" EntityType="Self.EmployeeCard_page7" />
+          <EntitySet Name="EmployeeCard_page8" EntityType="Self.EmployeeCard_page8" />
+          <EntitySet Name="EmployeeCard_page9" EntityType="Self.EmployeeCard_page9" />
+          <AssociationSet Name="FK_EmployeeCard_page1_EmployeeCard" Association="Self.FK_EmployeeCard_page1_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page1" EntitySet="EmployeeCard_page1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page10_EmployeeCard" Association="Self.FK_EmployeeCard_page10_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page10" EntitySet="EmployeeCard_page10" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page3_EmployeeCard" Association="Self.FK_EmployeeCard_page3_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page3" EntitySet="EmployeeCard_page3" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page4_EmployeeCard" Association="Self.FK_EmployeeCard_page4_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page4" EntitySet="EmployeeCard_page4" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page5_EmployeeCard" Association="Self.FK_EmployeeCard_page5_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page5" EntitySet="EmployeeCard_page5" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page6_EmployeeCard" Association="Self.FK_EmployeeCard_page6_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page6" EntitySet="EmployeeCard_page6" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page7_EmployeeCard" Association="Self.FK_EmployeeCard_page7_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page7" EntitySet="EmployeeCard_page7" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page8_EmployeeCard" Association="Self.FK_EmployeeCard_page8_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page8" EntitySet="EmployeeCard_page8" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page9_EmployeeCard" Association="Self.FK_EmployeeCard_page9_EmployeeCard">
+            <End Role="EmployeeCard" EntitySet="EmployeeCard" />
+            <End Role="EmployeeCard_page9" EntitySet="EmployeeCard_page9" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_vacancy_Structural_divisions" Association="Self.FK_Job_vacancy_Structural_divisions">
+            <End Role="Structural_divisions" EntitySet="Structural_divisions" />
+            <End Role="Job_vacancy" EntitySet="Job_vacancy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Staffing_table_Structural_divisions" Association="Self.FK_Staffing_table_Structural_divisions">
+            <End Role="Structural_divisions" EntitySet="Structural_divisions" />
+            <End Role="Staffing_table" EntitySet="Staffing_table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeCard_page3_Structural_divisions" Association="Self.FK_EmployeeCard_page3_Structural_divisions">
+            <End Role="Structural_divisions" EntitySet="Structural_divisions" />
+            <End Role="EmployeeCard_page3" EntitySet="EmployeeCard_page3" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище HumanResDBModelContainer" CdmEntityContainer="HumanResDBEntities">
+          <EntitySetMapping Name="EmployeeCard">
+            <EntityTypeMapping TypeName="HumanResDBModel.EmployeeCard">
+              <MappingFragment StoreEntitySet="EmployeeCard">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+                <ScalarProperty Name="Last_name" ColumnName="Last_name" />
+                <ScalarProperty Name="First_name" ColumnName="First_name" />
+                <ScalarProperty Name="Other_name" ColumnName="Other_name" />
+                <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+                <ScalarProperty Name="Post" ColumnName="Post" />
+                <ScalarProperty Name="Work_experience" ColumnName="Work_experience" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Job_vacancy">
+            <EntityTypeMapping TypeName="HumanResDBModel.Job_vacancy">
+              <MappingFragment StoreEntitySet="Job_vacancy">
+                <ScalarProperty Name="vacansy_id" ColumnName="vacansy_id" />
+                <ScalarProperty Name="structural_division_name" ColumnName="structural_division_name" />
+                <ScalarProperty Name="structural_division_id" ColumnName="structural_division_id" />
+                <ScalarProperty Name="post" ColumnName="post" />
+                <ScalarProperty Name="places_quantity" ColumnName="places_quantity" />
+                <ScalarProperty Name="total_per_month" ColumnName="total_per_month" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Staffing_table">
+            <EntityTypeMapping TypeName="HumanResDBModel.Staffing_table">
+              <MappingFragment StoreEntitySet="Staffing_table">
+                <ScalarProperty Name="staffing_table_id" ColumnName="staffing_table_id" />
+                <ScalarProperty Name="structural_division_name" ColumnName="structural_division_name" />
+                <ScalarProperty Name="structural_division_id" ColumnName="structural_division_id" />
+                <ScalarProperty Name="post" ColumnName="post" />
+                <ScalarProperty Name="number_of_employees" ColumnName="number_of_employees" />
+                <ScalarProperty Name="tariff_rate" ColumnName="tariff_rate" />
+                <ScalarProperty Name="allowance" ColumnName="allowance" />
+                <ScalarProperty Name="total_per_month" ColumnName="total_per_month" />
+                <ScalarProperty Name="compilation_date" ColumnName="compilation_date" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Structural_divisions">
+            <EntityTypeMapping TypeName="HumanResDBModel.Structural_divisions">
+              <MappingFragment StoreEntitySet="Structural_divisions">
+                <ScalarProperty Name="structural_division_id" ColumnName="structural_division_id" />
+                <ScalarProperty Name="structural_division_name" ColumnName="structural_division_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="HumanResDBModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeCard_page1">
+            <EntityTypeMapping TypeName="HumanResDBModel.EmployeeCard_page1">
+              <MappingFragment StoreEntitySet="EmployeeCard_page1">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+                <ScalarProperty Name="Last_name" ColumnName="Last_name" />
+                <ScalarProperty Name="First_name" ColumnName="First_name" />
+                <ScalarProperty Name="Other_name" ColumnName="Other_name" />
+                <ScalarProperty Name="Birth_date" ColumnName="Birth_date" />
+                <ScalarProperty Name="Birth_place" ColumnName="Birth_place" />
+                <ScalarProperty Name="Citizenship" ColumnName="Citizenship" />
+                <ScalarProperty Name="Eng_knowledge" ColumnName="Eng_knowledge" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Work_experience_d" ColumnName="Work_experience_d" />
+                <ScalarProperty Name="Work_experience_m" ColumnName="Work_experience_m" />
+                <ScalarProperty Name="Work_experience_y" ColumnName="Work_experience_y" />
+                <ScalarProperty Name="Passport_number" ColumnName="Passport_number" />
+                <ScalarProperty Name="Issue_date" ColumnName="Issue_date" />
+                <ScalarProperty Name="Residing_place" ColumnName="Residing_place" />
+                <ScalarProperty Name="Phone_number" ColumnName="Phone_number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeCard_page10">
+            <EntityTypeMapping TypeName="HumanResDBModel.EmployeeCard_page10">
+              <MappingFragment StoreEntitySet="EmployeeCard_page10">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+                <ScalarProperty Name="termination_reason" ColumnName="termination_reason" />
+                <ScalarProperty Name="dismissal_date" ColumnName="dismissal_date" />
+                <ScalarProperty Name="order_number" ColumnName="order_number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeCard_page3">
+            <EntityTypeMapping TypeName="HumanResDBModel.EmployeeCard_page3">
+              <MappingFragment StoreEntitySet="EmployeeCard_page3">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="structural_division_name" ColumnName="structural_division_name" />
+                <ScalarProperty Name="structural_division_id" ColumnName="structural_division_id" />
+                <ScalarProperty Name="post" ColumnName="post" />
+                <ScalarProperty Name="salary" ColumnName="salary" />
+                <ScalarProperty Name="cause" ColumnName="cause" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeCard_page4">
+            <EntityTypeMapping TypeName="HumanResDBModel.EmployeeCard_page4">
+              <MappingFragment StoreEntitySet="EmployeeCard_page4">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+                <ScalarProperty Name="qualification_category" ColumnName="qualification_category" />
+                <ScalarProperty Name="surcharge_amount" ColumnName="surcharge_amount" />
+                <ScalarProperty Name="cause" ColumnName="cause" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeCard_page5">
+            <EntityTypeMapping TypeName="HumanResDBModel.EmployeeCard_page5">
+              <MappingFragment StoreEntitySet="EmployeeCard_page5">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="prof_dev_type" ColumnName="prof_dev_type" />
+                <ScalarProperty Name="educational_institution_name" ColumnName="educational_institution_name" />
+                <ScalarProperty Name="cause" ColumnName="cause" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeCard_page6">
+            <EntityTypeMapping TypeName="HumanResDBModel.EmployeeCard_page6">
+              <MappingFragment StoreEntitySet="EmployeeCard_page6">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="specialty" ColumnName="specialty" />
+                <ScalarProperty Name="cause" ColumnName="cause" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeCard_page7">
+            <EntityTypeMapping TypeName="HumanResDBModel.EmployeeCard_page7">
+              <MappingFragment StoreEntitySet="EmployeeCard_page7">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+                <ScalarProperty Name="award_name" ColumnName="award_name" />
+                <ScalarProperty Name="issue_date" ColumnName="issue_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeCard_page8">
+            <EntityTypeMapping TypeName="HumanResDBModel.EmployeeCard_page8">
+              <MappingFragment StoreEntitySet="EmployeeCard_page8">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+                <ScalarProperty Name="vacation_type" ColumnName="vacation_type" />
+                <ScalarProperty Name="days_number" ColumnName="days_number" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="cause" ColumnName="cause" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeCard_page9">
+            <EntityTypeMapping TypeName="HumanResDBModel.EmployeeCard_page9">
+              <MappingFragment StoreEntitySet="EmployeeCard_page9">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="employee_code" ColumnName="employee_code" />
+                <ScalarProperty Name="additional_information" ColumnName="additional_information" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,30 @@
+﻿<Page x:Class="TestHR.Pages.T2Pages._8VacationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestHR.Pages.T2Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="VacationPage">
+
+    <Grid Grid.Row="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Style="{DynamicResource MainLabel}" FontSize="22">VIII. Отпуск</Label>
+        <DataGrid x:Name="EmployeeDataGrid" Grid.Row="2" AutoGenerateColumns="False" ColumnWidth="*" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Вид отпуска (ежегодный, учебный, без сохранения заработной платы и др.)" Binding="{Binding vacation_type}"></DataGridTextColumn>
+                <DataGridTextColumn Width="230" Header="Количество календарных дней отпуска" Binding="{Binding days_number}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата начала" Binding="{Binding start_date}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата окончания" Binding="{Binding end_date}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Основание" Binding="{Binding cause}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="3"></StackPanel>
+    </Grid>
+</Page>
