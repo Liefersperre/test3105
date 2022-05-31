@@ -23,7 +23,7 @@
 
         <Rectangle Fill="#a09b9e"/>
         <Rectangle Fill="DarkCyan" Grid.Row="1"/>
-        <Rectangle Fill="{StaticResource MainColor}" Grid.Row="3"/>
+        <Rectangle Fill="{StaticResource SecondColor}" Grid.Row="3"/>
         <Image Source="/Resources/logo.png" Margin="5,0,538,5"/>
 
         <Frame Grid.Row="2" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
